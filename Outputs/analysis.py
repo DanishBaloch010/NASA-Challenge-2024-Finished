@@ -21,16 +21,15 @@ range_TD = max(TimeDeviation) - min(TimeDeviation)
 
 extreme = 0
 NormilzedMeanPD = []
+
 for i in PercentageDifference:
     if i > 10:
-        extreme +=1
+        extreme += 1
     else:
         NormilzedMeanPD.append(i)
 
 Mean_PD = np.mean(NormilzedMeanPD)
 
-        
-
 print(Mean_AD, Mean_PD, Mean_TD)
 print(extreme)
-
+print(f'Mean_PD with extremes : {np.mean(PercentageDifference)}')
